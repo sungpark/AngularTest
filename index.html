@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>&#9829; Engineering Love</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/base-style.css">
+  <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="js/vendor/modernizr-2.7.1.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="js/jquery.interactive_bg.js"></script>
+  <script>
+    $(function() {
+      $('a[href*=#]:not([href=#],[href=#myCarousel])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+  </script>
+</head>
+<body class="loading">
+  <div id="preload">
+   	<img src="img/bg-sc1.jpg">
+   	<!-- <img src="img/bg-sc2.jpg">
+   	<img src="img/bg-sc3.jpg">
+    <img src="img/bg-sc4.jpg"> -->
+ 	</div>
+
+  <div id="skrollr-body">
+    <section id="slide-1" class="baseslide">
+      <div class="bg">
+        <div class="hsContainer">
+          <div class="hsContent" data-center="top: 10%; opacity: 1" data-top="top: 0%; opacity: 1" data-anchor-target="#slide-1 p">
+            <div><img src="img/logo-vz.png" width="168"></div>
+            <br><br>
+            <h2>Verizon Technology</h2>
+            <p>Verizon is one of the largest communication technology companies in the world. We operate America’s largest 4G LTE wireless network and the nation’s premiere all-fiber broadband network.</p>
+
+            <p>We also operate one of the world's most connected public internet backbone networks, enabling global solutions for secure communication.  Our Global IP network connects over 2700 cities in more than 150 countries. More than 5 percent of the internet's traffic flows over our network.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="slide-2" class="baseslide">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="item bg-1 active">
+            <div class="container">
+              <div class="carousel-caption">
+                <h2>Scale</h2>
+                <p>We are problem-solvers, engineers, technologists and innovators. Every day, we connect millions of people, companies and communities with our powerful technology. Not many companies get the chance to change the industry and the world through innovation. We do.</p>
+              </div>
+            </div>
+          </div>
+          <div class="item bg-2">
+            <div class="container">
+              <div class="carousel-caption">
+                <h2>Scale 2</h2>
+                <p>We are problem-solvers, engineers, technologists and innovators. Every day, we connect millions of people, companies and communities with our powerful technology. Not many companies get the chance to change the industry and the world through innovation. We do.</p>
+              </div>
+            </div>
+          </div>
+          <div class="item bg-3">
+            <div class="container">
+              <div class="carousel-caption">
+                <h2>Scale 3</h2>
+                <p>We are problem-solvers, engineers, technologists and innovators. Every day, we connect millions of people, companies and communities with our powerful technology. Not many companies get the chance to change the industry and the world through innovation. We do.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="mainProdContainer"></div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div>
+    </section>
+
+  	<section id="slide-3" class="baseslide">
+  		<div class="bg"
+  			data-center="background-position: 50% 10px;"
+  			data-top-bottom="background-position: 50% -100px;"
+  			data-bottom-top="background-position: 50% 100px;"
+  			data-anchor-target="#slide-3"
+  		>
+      	<div class="hsContainer">
+      		<div class="hsContent"
+      			data-center="opacity: 1; top: 25%;"
+      			data-center-top="opacity: 0; top: 10%;"
+      			data--100-bottom="opacity: 0; top: 25%;"
+      			data-anchor-target="#slide-3"
+      		>
+            <div id="stage">
+              <div id="chartX">
+                <div id="chartY">
+                  <div id="chartZ">
+                    <!-- 1 unit = 1.6em -->
+                    <div class="bar" style="left: 0px; background: rgba(255,255,255,0.7); -webkit-transform: translateZ(3.2em); -moz-transform: translateZ(3.2em);">
+                      <div class="barfront" style="height: 3.2em;"></div>
+                      <div class="barback" style="height: 3.2em;"></div>
+                      <div class="barright" style="width: 3.2em;"></div>
+                      <div class="barleft" style="width: 3.2em;"></div>
+                      20
+                    </div>
+                    <div class="bar" style="left: 50px; background: rgba(255,255,255,0.7); -webkit-transform: translateZ(4.8em); -moz-transform: translateZ(4.8em);">
+                      <div class="barfront" style="height: 4.8em;"></div>
+                      <div class="barback" style="height: 4.8em;"></div>
+                      <div class="barright" style="width: 4.8em;"></div>
+                      <div class="barleft" style="width: 4.8em;"></div>
+                      30
+                    </div>
+                    <div class="bar" style="left: 100px; background: rgba(255,255,255,0.7); -webkit-transform: translateZ(1.6em); -moz-transform: translateZ(1.6em);">
+                      <div class="barfront" style="height: 1.6em;"></div>
+                      <div class="barback" style="height: 1.6em;"></div>
+                      <div class="barright" style="width: 1.6em;"></div>
+                      <div class="barleft" style="width: 1.6em;"></div>
+                      10
+                    </div>
+
+                    <div class="bar" style="left: 150px; background: rgba(255,255,255,0.7); -webkit-transform: translateZ(6.4em); -moz-transform: translateZ(6.4em);">
+                      <div class="barfront" style="height: 6.4em;"></div>
+                      <div class="barback" style="height: 6.4em;"></div>
+                      <div class="barright" style="width: 6.4em;"></div>
+                      <div class="barleft" style="width: 6.4em;"></div>
+                      40
+                    </div>
+                    <div class="bar" style="left: 200px; background: rgba(255,255,255,0.7); -webkit-transform: translateZ(4em); -moz-transform: translateZ(4em);">
+                      <div class="barfront" style="height: 4em;"></div>
+                      <div class="barback" style="height: 4em;"></div>
+                      <div class="barright" style="width: 4em;"></div>
+                      <div class="barleft" style="width: 4em;"></div>
+                      25
+                    </div>
+                    <div class="bar" style="left: 250px; background: rgba(255,255,255,0.7); -webkit-transform: translateZ(2.4em); -moz-transform: translateZ(2.4em);">
+                      <div class="barfront" style="height: 2.4em;"></div>
+                      <div class="barback" style="height: 2.4em;"></div>
+                      <div class="barright" style="width: 2.4em;"></div>
+                      <div class="barleft" style="width: 2.4em;"></div>
+                      15
+                    </div>
+                    <div class="slantcontent">
+                      <h2>The Networks</h2>
+                      <p id="slidein-1">Our investment in superior wireless, fiber optic and global IP networks puts Verizon at the center of powerful growth markets. Our networks enable us to deliver innovative services like cloud, video and telematics to enrich the lives of our customers around the globe.</p>
+                      <p id="slidein-2">Verizon is one of the largest communication technology companies in the world. We operate America’s largest 4G LTE wireless network and the nation’s premiere all-fiber broadband network.</p>
+                      <p id="slidein-3">We also operate one of the world's most connected public internet backbone networks, enabling global solutions for secure communication. Our Global IP network connects over 2700 cities in more than 150 countries. More than 5 percent of the internet's traffic flows over our network.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      		</div>
+      	</div>
+  		</div>
+  	</section>
+
+  	<section id="slide-4" class="baseslide">
+  		<div id="changeNav" class="bg"
+  			data-center="background-position: 50% 0px;"
+  			data-top-bottom="background-position: 50% -100px;"
+  			data-bottom-top="background-position: 50% 100px;"
+  			data-anchor-target="#slide-4"
+  		>
+      	<div class="hsContainer">
+      		<div class="hsContent"
+      			data--50-bottom="opacity: 0;"
+      			data--200-bottom="opacity: 1;"
+      			data-center="opacity: 1"
+      			data-15-top="opacity: 1"
+      			data-anchor-target="#slide-4 h2"
+      		>
+        		<h2>Resources</h2>
+            <p>Verizon has the resources to maintain and expand its scale. Our 177,300 employees continually work to bring top tier communication services to our customers. We have more than 200 datacenters worldwide in which to deploy applications, and 6.5 Terabytes of CDN capacity to deliver data quickly and efficiently.</p>
+            <ul>
+              <li>177,300+ Employees</li>
+              <li>$127.1 billion in annual revenue</li>
+              <li>$17.2 billion in capital investments</li>
+              <li>200+ Datacenters worldwide</li>
+              <li>6.5 TB/s CDN capacity</li>
+              <li>Customers</li>
+              <li>"Logo Bingo"</li>
+            </ul>
+      		</div>
+      	</div>
+      </div>
+  	</section>
+
+    <section id="slide-5" class="baseslide">
+      <div class="bgx" data-ibg-bg="img/bg-baselayer.jpg">
+        <div class="hsContainer">
+          <div class="hsContent" data-anchor-target="#slide-5 h2">
+            <h2>About our Culture</h2>
+            <ul class="photogallery">
+              <li><a href="#"><img src="img/gallery-sample1.jpg"></a><div class="imgtext">Vacation!</div></li>
+              <li><a href="#"><img src="img/gallery-sample2.jpg"></a><div class="imgtext">Amazing View</div></li>
+              <li><a href="#"><img src="img/gallery-sample3.jpg"></a><div class="imgtext">Office</div></li>
+              <li><a href="#"><img src="img/gallery-sample4.jpg"></a><div class="imgtext">Party</div></li>
+              <li><a href="#"><img src="img/gallery-sample5.jpg"></a><div class="imgtext">Dream Car</div></li>
+              <li><a href="#"><img src="img/gallery-sample6.jpg"></a><div class="imgtext">Colors?</div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <script type="text/javascript">
+        $(".bgx").interactive_bg();
+      </script>
+    </section>
+
+  	<section id="slide-6" class="baseslide">
+      <div class="bg"
+        data-center="background-position: 50% 0px;"
+        data-top-bottom="background-position: 50% -100px;"
+        data-bottom-top="background-position: 50% 100px;"
+        data-anchor-target="#slide-6"
+      >
+        <div class="hsContainer">
+          <div class="hsContent"
+            data--50-bottom="opacity: 0;"
+            data--200-bottom="opacity: 1;"
+            data-center="opacity: 1"
+            data-15-top="opacity: 1"
+            data-anchor-target="#slide-6 h2"
+          >
+            <h2></h2>
+            <!-- <p>Verizon has the resources to maintain and expand its scale. Our 177,300 employees continually work to bring top tier communication services to our customers. We have more than 200 datacenters worldwide in which to deploy applications, and 6.5 Terabytes of CDN capacity to deliver data quickly and efficiently.</p>
+            <ul>
+              <li>177,300+ Employees</li>
+              <li>$127.1 billion in annual revenue</li>
+              <li>$17.2 billion in capital investments</li>
+              <li>200+ Datacenters worldwide</li>
+              <li>6.5 TB/s CDN capacity</li>
+              <li>Customers</li>
+              <li>"Logo Bingo"</li>
+            </ul> -->
+
+            <div class="masonry">
+              <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+              <div class="item">Neque, vitae, fugiat, libero corrupti officiis sint facilis tempora quidem repudiandae praesentium odit similique adipisci aut.</div>
+              <div class="item">Incidunt sit unde minima in nostrum?</div>
+              <div class="item">Ducimus, voluptates, modi, delectus animi maiores consequuntur repellat quisquam fugiat eum possimus enim culpa totam praesentium magni quae!</div>
+              <div class="item"><a href="#"><img src="img/gallery-sample1.jpg"></a></div>
+              <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, praesentium consequatur ducimus commodi quam ex illo omnis dicta reiciendis vel nesciunt deserunt aut sequi nam mollitia perferendis ipsam possimus temporibus!</div>
+              <div class="item">Ab, adipisci, temporibus eaque quis harum perferendis incidunt cupiditate doloribus dolor numquam voluptates ipsum dolore aspernatur et voluptate ipsam beatae animi culpa.</div>
+              <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, praesentium consequatur ducimus commodi quam ex illo omnis dicta reiciendis vel nesciunt deserunt aut sequi nam mollitia perferendis ipsam possimus temporibus!</div>
+              <div class="item"><a href="#"><img src="img/gallery-sample2.jpg"></a></div>
+              <div class="item">Ducimus, voluptates, modi, delectus animi maiores consequuntur repellat quisquam fugiat eum possimus enim culpa totam praesentium magni quae!</div>
+              <div class="item">Lorem ipsum dolor sit amet, dicta dolore adipisci hic ipsam velit deleniti possimus cumque accusantium rerum quibusdam.</div>
+              <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+              <div class="item">Neque, vitae, fugiat, libero corrupti officiis sint facilis tempora quidem repudiandae praesentium odit similique adipisci aut.</div>
+              <div class="item">Incidunt sit unde minima in nostrum?</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="slide-7" class="baseslide">
+      <div class="bg"
+        data-center="background-position: 50% 0px;"
+        data-top-bottom="background-position: 50% -100px;"
+        data-bottom-top="background-position: 50% 100px;"
+        data-anchor-target="#slide-7"
+      >
+        <div class="hsContainer" data-0="background-color: rgba(0,0,0,1);" data-top="background-color: rgba(238,238,238,1);">
+          <div class="hsContent"
+            data-bottom-top="opacity: 0"
+            data-25p-top="opacity: 0"
+            data-top="opacity: 1"
+            data-anchor-target="#slide-7"
+          >
+            <ul class="sitemap">
+              <li>
+                <h4>VDMS Irving</h4>
+                <ul>
+                  <li><a href="#">127.0.0.1</a></li>
+                </ul>
+              </li>
+              <li>
+                <h4>Designers</h4>
+                <ul>
+                  <li><a href="#" class="designer1">We are not gods</a></li>
+                  <li><a href="#" class="designer2">We are not gods</a></li>
+                </ul>
+              </li>
+              <li>
+                <h4>Devs (only two kinds)</h4>
+                <ul>
+                  <li><a href="#">if (conditions) {<br>
+                  &nbsp;&nbsp;Statements;<br>
+                  }<br></a></li>
+                  <li><a href="#">if (conditions)<br>
+                  {<br>
+                  &nbsp;&nbsp;Statements;<br>
+                  }<br></a></li>
+                </ul>
+              </li>
+              <li>
+                <h4>Other PPL?</h4>
+                <ul>
+                  <li><a href="#">Not sure who u are</a></li>
+                  <li><a href="#">Not sure who u are</a></li>
+                  <li><a href="#">Not sure who u are</a></li>
+                  <li><a href="#">Not sure who u are</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <header id="header" class="navbar-static-top" role="navigation"
+  data-0="position:absolute;top:auto;bottom:!0;"
+  data-top="position:fixed;top:!0;bottom:auto;">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">
+            <div id="logo">
+              <span data-top="opacity: 1" data-center="opacity: 0" data--100-bottom="opacity: 0;"><img src="img/logo-vz.png" width="60"></span>
+              <span class="glyphicon"><span class="glyphicon glyphicon-heart"></span></span><span class="title">Engineering Love<span class="iconbase-circle"></span></span>
+            </div>
+          </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#slide-1">Home</a></li>
+            <li class=""><a href="#slide-2">Scale</a></li>
+            <li class=""><a href="#slide-3">Network</a></li>
+            <li class=""><a href="#slide-4">Resources</a></li>
+            <li class=""><a href="#slide-5">Culture</a></li>
+            <li class=""><a href="#slide-6">Expertize</a></li>
+            <li class=""><a href="#slide-7">Join Us</a></li>
+            <!-- <li class=""><a href="#"><span class="glyphicon glyphicon-star"></span></a></li> -->
+          </ul>
+        </div>
+      </div>
+    </header>
+  </div>
+
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="js/imagesloaded.js"></script>
+  <script src="js/skrollr.js"></script>
+  <script src="js/_main.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

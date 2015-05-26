@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" data-ng-app="testApp"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>&#9829; Engineering Love</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style2.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+
+  <script type="text/javascript" src="js/vendor/modernizr-2.7.1.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="js/jquery.interactive_bg.js"></script>
+  <script>
+    $(function() {
+      $('a[href*=#]:not([href=#],[href=#myCarousel])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+  </script>
+  <script src="js/angular.min.js"></script>
+  <script>
+    var testApp = angular.module('testApp', []);
+
+    testApp.controller('dataController', function($scope, $http) {
+      $http.get("js/dataHolder.json").success(function(response) {
+        $scope.dataVariables = response;
+      });
+    });
+
+    testApp.controller('dataController', function ($scope) {
+      $scope.toggleHeaderIcon = true;
+
+      $scope.$watch('toggleHeaderIcon', function(){
+        $scope.BTNheaderIcon = $scope.toggleHeaderIcon ? 'Enabled' : 'Disabled';
+      });
+
+      $scope.transformX = "rotateX(0deg)";
+      $scope.$watch("xnumber", function(valX) {
+          $scope.transformX = "rotateX("+valX+"deg)";
+      });
+      $scope.transformY = "rotateY(0deg)";
+      $scope.$watch("ynumber", function(valY) {
+          $scope.transformY = "rotateX("+valY+"deg)";
+      });
+      $scope.transformZ = "rotateZ(0deg)";
+      $scope.$watch("znumber", function(valZ) {
+          $scope.transformZ = "rotateZ("+valZ+"deg)";
+      });
+
+    });
+  </script>
+</head>
+<body class="loading" ng-controller="dataController">
+  <div id="preload">
+   	<img src="img/bg-sc1.jpg">
+   	<img src="img/bg-sc2.jpg">
+   	<!-- <img src="img/bg-sc3.jpg">
+    <img src="img/bg-sc4.jpg"> -->
+ 	</div>
+
+  <div id="skrollr-body">
+    <section id="slide-1" class="baseslide">
+      <div class="bg">
+        <div class="hsContainer">
+          <div class="hsContent" data-center="top: 10%; opacity: 1" data-top="top: 0%; opacity: 1" data-anchor-target="#slide-1 p">
+            <div><img src="img/logo-vz.png" width="168"></div>
+            <br><br>
+            <h2 ng-init="pageTitle='Verizon Technology'">{{ pageTitle }}</h2>
+            <p ng-init="s1p1='Verizon is one of the largest communication technology companies in the world. We operate America\'s largest 4G LTE wireless network and the nation\'s premiere all-fiber broadband network.'">{{ s1p1 }}</p>
+            <p ng-init="s1p2='We also operate one of the world\'s most connected public internet backbone networks, enabling global solutions for secure communication.  Our Global IP network connects over 2700 cities in more than 150 countries. More than 5 percent of the internet\'s traffic flows over our network.'">{{ s1p2 }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="slide-2" class="baseslide">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="item bg-1 active">
+            <div class="container">
+              <div class="carousel-caption">
+                <h2 ng-init="s2slide1Title='Slide 1 Title'">{{ s2slide1Title }}</h2>
+                <p ng-init="s2slide1p1='We are problem-solvers, engineers, technologists and innovators. Every day, we connect millions of people, companies and communities with our powerful technology. Not many companies get the chance to change the industry and the world through innovation. We do.'">{{ s2slide1p1 }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="item bg-2">
+            <div class="container">
+              <div class="carousel-caption">
+                <h2 ng-init="s2slide2Title='Slide 2 Title'">{{ s2slide2Title }}</h2>
+                <p ng-init="s2slide2p1='We are problem-solvers, engineers, technologists and innovators. Every day, we connect millions of people, companies and communities with our powerful technology. Not many companies get the chance to change the industry and the world through innovation. We do.'">{{ s2slide2p1 }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="item bg-3">
+            <div class="container">
+              <div class="carousel-caption">
+                <h2 ng-init="s2slide3Title='Slide 3 Title'">{{ s2slide3Title }}</h2>
+                <p ng-init="s2slide3p1='We are problem-solvers, engineers, technologists and innovators. Every day, we connect millions of people, companies and communities with our powerful technology. Not many companies get the chance to change the industry and the world through innovation. We do.'">{{ s2slide3p1 }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="mainProdContainer"></div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div>
+    </section>
+
+    <section id="slide-3" class="baseslide">
+      <div class="bg"
+        data-center="background-position: 50% 10px;"
+        data-top-bottom="background-position: 50% -100px;"
+        data-bottom-top="background-position: 50% 100px;"
+        data-anchor-target="#slide-3"
+      >
+        <div class="hsContainer">
+          <div class="hsContent"
+            data-center="opacity: 1; top: 25%;"
+            data-center-top="opacity: 0; top: 10%;"
+            data--100-bottom="opacity: 0; top: 25%;"
+            data-anchor-target="#slide-3"
+          >
+            <div id="stage">
+              <div id="chartX" ng-style="{'transform': 'rotateX('+xnumber+'deg)', '-webkit-transform': 'rotateX('+xnumber+'deg)', '-ms-transform': 'rotateX('+xnumber+'deg)'}" ng-init="xnumber='55'">
+                <div id="chartY" ng-style="{'transform': 'rotateY('+ynumber+'deg)', '-webkit-transform': 'rotateY('+ynumber+'deg)', '-ms-transform': 'rotateY('+ynumber+'deg)'}" ng-init="ynumber='0'">
+                  <div id="chartZ" ng-style="{'transform': 'rotateZ('+znumber+'deg)', '-webkit-transform': 'rotateZ('+znumber+'deg)', '-ms-transform': 'rotateZ('+znumber+'deg)'}" ng-init="znumber='-20'">
+                    <!-- 1 unit = 1.6em -->
+                    <div class="bar" style="left: 0px; background: rgba(255,255,255,0.7); -webkit-transform: translateZ(3.2em); -moz-transform: translateZ(3.2em);">
+                      <div class="barfront" style="height: 3.2em;"></div>
+                      <div class="barback" style="height: 3.2em;"></div>
+                      <div class="barright" style="width: 3.2em;"></div>
+                      <div class="barleft" style="width: 3.2em;"></div>
+                      20
+                    </div>
+                    <div class="bar" style="left: 50px; background: rgba(255,255,255,0.7); -webkit-transform: translateZ(4.8em); -moz-transform: translateZ(4.8em);">
+                      <div class="barfront" style="height: 4.8em;"></div>
+                      <div class="barback" style="height: 4.8em;"></div>
+                      <div class="barright" style="width: 4.8em;"></div>
+                      <div class="barleft" style="width: 4.8em;"></div>
+                      30
+                    </div>
+                    <div class="bar" style="left: 100px; background: rgba(255,255,255,0.7); -webkit-transform: translateZ(1.6em); -moz-transform: translateZ(1.6em);">
+                      <div class="barfront" style="height: 1.6em;"></div>
+                      <div class="barback" style="height: 1.6em;"></div>
+                      <div class="barright" style="width: 1.6em;"></div>
+                      <div class="barleft" style="width: 1.6em;"></div>
+                      10
+                    </div>
+
+                    <div class="bar" style="left: 150px; background: rgba(255,255,255,0.7); -webkit-transform: translateZ(6.4em); -moz-transform: translateZ(6.4em);">
+                      <div class="barfront" style="height: 6.4em;"></div>
+                      <div class="barback" style="height: 6.4em;"></div>
+                      <div class="barright" style="width: 6.4em;"></div>
+                      <div class="barleft" style="width: 6.4em;"></div>
+                      40
+                    </div>
+                    <div class="bar" style="left: 200px; background: rgba(255,255,255,0.7); -webkit-transform: translateZ(4em); -moz-transform: translateZ(4em);">
+                      <div class="barfront" style="height: 4em;"></div>
+                      <div class="barback" style="height: 4em;"></div>
+                      <div class="barright" style="width: 4em;"></div>
+                      <div class="barleft" style="width: 4em;"></div>
+                      25
+                    </div>
+                    <div class="bar" style="left: 250px; background: rgba(255,255,255,0.7); -webkit-transform: translateZ(2.4em); -moz-transform: translateZ(2.4em);">
+                      <div class="barfront" style="height: 2.4em;"></div>
+                      <div class="barback" style="height: 2.4em;"></div>
+                      <div class="barright" style="width: 2.4em;"></div>
+                      <div class="barleft" style="width: 2.4em;"></div>
+                      15
+                    </div>
+                    <div class="slantcontent">
+                      <h2 ng-init="s3Title='The Networks'">{{ s3Title }}</h2>
+                      <p id="slidein-1" ng-init="s3p1='Our investment in superior wireless, fiber optic and global IP networks puts Verizon at the center of powerful growth markets. Our networks enable us to deliver innovative services like cloud, video and telematics to enrich the lives of our customers around the globe.'">{{ s3p1 }}</p>
+                      <p id="slidein-2" ng-init="s3p2='Verizon is one of the largest communication technology companies in the world. We operate America\’s largest 4G LTE wireless network and the nation\’s premiere all-fiber broadband network.'">{{ s3p2 }}</p>
+                      <p id="slidein-3" ng-init="s3p3='We also operate one of the world\'s most connected public internet backbone networks, enabling global solutions for secure communication. Our Global IP network connects over 2700 cities in more than 150 countries. More than 5 percent of the internet\'s traffic flows over our network.'">{{ s3p3 }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <header id="header" class="navbar-static-top" role="navigation"
+  data-0="position:absolute;top:auto;bottom:!0;"
+  data-top="position:fixed;top:!0;bottom:auto;">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">
+            <div id="logo">
+              <span data-top="opacity: 1" data-center="opacity: 0" data--100-bottom="opacity: 0;"><img src="img/logo-vz.png" width="60"></span>
+              <span class="glyphicon" ng-hide="!toggleHeaderIcon"><span class="glyphicon glyphicon-heart"></span></span><span class="title" ng-init="headerTitle='Engineering Love'">{{ headerTitle }}<span class="iconbase-circle"></span></span>
+            </div>
+          </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <!-- <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#slide-1">Home</a></li>
+            <li class=""><a href="#slide-2">Scale</a></li>
+            <li class=""><a href="#slide-3">Network</a></li>
+            <li class=""><a href="#slide-4">Resources</a></li>
+            <li class=""><a href="#slide-5">Culture</a></li>
+            <li class=""><a href="#slide-6">Expertize</a></li>
+            <li class=""><a href="#slide-7">Join Us</a></li>
+            <li class=""><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+          </ul>-->
+          <ul class="nav navbar-nav navbar-right">
+            <li data-ng-repeat="navitem in headerNav"><a href="#">{{ navitem }}</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div id="controlPanel">
+      <div class="pageElements">
+        <label>Header Icon</label>
+        <button ng-class="{' ': !toggleHeaderIcon, 'active': toggleHeaderIcon}" ng-click="toggleHeaderIcon = !toggleHeaderIcon">{{ BTNheaderIcon }}</button>
+      </div>
+      <div class="pageElements">
+        <label>Header Title</label>
+        <input type="text" ng-model="headerTitle">
+      </div>
+      <div class="pageElements">
+        <label>Header Navigational Items</label>
+        <textarea class="headerItems" ng-model="headerNav" ng-list="&#10;" ng-trim="false" ng-init="headerNav=['Home','Scale','Network','Resources','Culture','Expertise','Join Us']"></textarea>
+      </div>
+      <hr>
+      <div id="ctrl-slide1">
+        <div class="pageElements">
+          <label>Page Title</label>
+          <input type="text" ng-model="pageTitle">
+        </div>
+        <div class="pageElements">
+          <label>Page Contents</label>
+          <textarea class="pageContent" ng-model="s1p1"></textarea>
+          <label></label>
+          <textarea class="pageContent" ng-model="s1p2"></textarea>
+        </div>
+      </div>
+      <div id="ctrl-slide2">
+        <div class="pageElements">
+          <label>Title - Slide 1</label>
+          <input type="text" ng-model="s2slide1Title">
+        </div>
+        <div class="pageElements">
+          <label>Page Contents - Slide 1</label>
+          <textarea class="pageContent" ng-model="s2slide1p1"></textarea>
+        </div>
+        <div class="pageElements">
+          <label>Title - Slide 2</label>
+          <input type="text" ng-model="s2slide2Title">
+        </div>
+        <div class="pageElements">
+          <label>Page Contents - Slide 2</label>
+          <textarea class="pageContent" ng-model="s2slide2p1"></textarea>
+        </div>
+        <div class="pageElements">
+          <label>Title - Slide 3</label>
+          <input type="text" ng-model="s2slide3Title">
+        </div>
+        <div class="pageElements">
+          <label>Page Contents - Slide 3</label>
+          <textarea class="pageContent" ng-model="s2slide3p1"></textarea>
+        </div>
+      </div>
+      <div id="ctrl-slide3">
+        <div class="pageElements">
+          <label>Slide 3 Title</label>
+          <input type="text" ng-model="s3Title">
+        </div>
+        <div class="pageElements">
+          <label>Slide 3 Contents</label>
+          <textarea class="pageContent" ng-model="s3p1"></textarea>
+          <label></label>
+          <textarea class="pageContent" ng-model="s3p2"></textarea>
+          <label></label>
+          <textarea class="pageContent" ng-model="s3p3"></textarea>
+        </div>
+        <div class="pageElements">
+          <label for="gphXcontrol">X-Axis</label>
+          <input type="range" class="sliderControl" min="-180" max="180" ng-model="xnumber" id="gphXcontrol">
+          <input type="text" class="sliderControlDisplay" ng-model="xnumber">
+        </div>
+        <div class="pageElements">
+          <label for="gphYcontrol">Y-Axis</label>
+          <input type="range" class="sliderControl" min="-180" max="180" ng-model="ynumber" id="gphYcontrol">
+          <input type="text" class="sliderControlDisplay" ng-model="ynumber">
+        </div>
+        <div class="pageElements">
+          <label for="gphZcontrol">Z-Axis</label>
+          <input type="range" class="sliderControl" min="-180" max="180" ng-model="znumber" id="gphZcontrol">
+          <input type="text" class="sliderControlDisplay" ng-model="znumber">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="js/imagesloaded.js"></script>
+  <script src="js/skrollr.js"></script>
+  <script src="js/_main.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

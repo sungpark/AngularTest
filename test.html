@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html data-ng-app="testApp">
+  <head>
+    <title></title>
+    <script src="js/angular.min.js"></script>
+    <script>
+      var testApp = angular.module('testApp', []).controller('controllerInfo', function ($scope) {
+          $scope.devTeam = [
+            {name:'Hari', codeNum:'4345'},
+            {name:'Rajesh', codeNum:'2457'},
+            {name:'Karthik', codeNum:'2452'},
+            {name:'Anish', codeNum:'1678'}
+          ];
+        });
+    </script>
+  </head>
+  <body>
+    <div data-ng-controller="controllerInfo">
+      Name:
+      <br>
+      <input type="text" ng-model="nameOnly"> {{ nameOnly }}
+      <br>
+      <h3>Looping with the ng-repeat Directives</h3>
+      <ul>
+        <li data-ng-repeat="info in devTeam | orderBy:'name' ">{{ info.name }}</li>
+      </ul>
+      <br><br>
+
+      <input type="text" ng-model="nameInfo"> {{ nameInfo }}
+      <h3>Looping with extra info.</h3>
+      <ul>
+        <li data-ng-repeat="info in devTeam | filter:nameInfo | orderBy:'codeNum'">{{ info.name | uppercase }} - {{ info.codeNum }}</li>
+      </ul>
+
+      <h3>List from textarea</h3>
+      <textarea class="headerItems" data-ng-model="TAlist" ng-list="&#10;" ng-trim="false" ng-init="TAlist=['test 1', 'test 2']"></textarea>
+      <ul>
+        <li data-ng-repeat="ditem in TAlist">{{ ditem }}</li>
+      </ul>
+    </div>
+  </body>
+</html>
