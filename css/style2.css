@@ -38,6 +38,12 @@ html, body {
       min-width: 0 !important;
       max-width: 40px !important;
       margin-left: 2em; }
+    #controlPanel .pageElements input.showInput + .tooltip > .tooltip-inner {
+      background-color: whitesmoke;
+      color: #333333;
+      max-width: 100%; }
+    #controlPanel .pageElements input.showInput + .tooltip > .tooltip-arrow {
+      border-bottom-color: whitesmoke; }
     #controlPanel .pageElements button {
       color: #666666;
       border-radius: .3em; }

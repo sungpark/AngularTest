@@ -36,6 +36,15 @@ html, body {
       max-width: 40px !important;
       margin-left: 2em;
     }
+
+    input.showInput + .tooltip > .tooltip-inner {
+      background-color: $white96;
+      color: $black80;
+      max-width: 100%;
+    }
+    input.showInput + .tooltip > .tooltip-arrow {
+      border-bottom-color: $white96;
+    }
     button {
       color: $black60;
       border-radius: .3em;
