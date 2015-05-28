@@ -35,6 +35,7 @@
     });
     $(document).ready(function(){
       $("input").tooltip();
+      $("label.disabledInput").tooltip();
     });
   </script>
   <script src="js/angular.min.js"></script>
@@ -265,6 +266,10 @@
       <div class="pageElements">
         <label>Header Title</label>
         <input type="text" ng-model="headerTitle" data-trigger="focus" custom-tooltip title="{{ headerTitle }}" class="showInput">
+      </div>
+      <div class="pageElements">
+        <label>Header Title (Disabled)</label>
+        <label data-trigger="hover" custom-tooltip title="{{ headerTitle }}" class="disabledInput">loooooooooooooong text...</label>
       </div>
       <div class="pageElements">
         <label>Header Navigational Items</label>

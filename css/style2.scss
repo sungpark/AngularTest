@@ -70,6 +70,23 @@ html, body {
       margin-left: 1em;
       margin-right: 2em;
     }
+    label.disabledInput {
+      min-width: 30%;
+      max-width: 30%;
+      border: none;
+      background-color: $white80;
+      padding: 3px 7px;
+      color: $black80;
+      white-space: nowrap;
+    }
+    label.disabledInput + .tooltip > .tooltip-inner {
+      background-color: $red;
+      color: $white96;
+      max-width: 100%;
+    }
+    label.disabledInput + .tooltip > .tooltip-arrow {
+      border-bottom-color: $red;
+    }
   }
   hr {
     display: block;

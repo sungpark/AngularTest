@@ -63,6 +63,20 @@ html, body {
       width: auto !important;
       margin-left: 1em;
       margin-right: 2em; }
+    #controlPanel .pageElements label.disabledInput {
+      min-width: 30%;
+      max-width: 30%;
+      border: none;
+      background-color: #cccccc;
+      padding: 3px 7px;
+      color: #333333;
+      white-space: nowrap; }
+    #controlPanel .pageElements label.disabledInput + .tooltip > .tooltip-inner {
+      background-color: #ff0000;
+      color: whitesmoke;
+      max-width: 100%; }
+    #controlPanel .pageElements label.disabledInput + .tooltip > .tooltip-arrow {
+      border-bottom-color: #ff0000; }
   #controlPanel hr {
     display: block;
     height: 1px;
