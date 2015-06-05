@@ -14,6 +14,88 @@
 html, body {
   font-family: 'Strait', sans-serif; }
 
+#controlPanelAlt {
+  position: fixed;
+  top: 0px !important;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  padding-top: 1em;
+  z-index: 99999 !important; }
+  #controlPanelAlt .pageElements {
+    display: block;
+    margin-bottom: 1em;
+    padding: 0.5em 1em; }
+    #controlPanelAlt .pageElements input, #controlPanelAlt .pageElements textarea {
+      color: #333333;
+      min-width: 5%; }
+    #controlPanelAlt .pageElements input.sliderControl {
+      display: inline-block;
+      max-width: 30%; }
+    #controlPanelAlt .pageElements input.sliderControlDisplay {
+      min-width: 0 !important;
+      max-width: 40px !important;
+      margin-left: 2em; }
+    #controlPanelAlt .pageElements input.showInput + .tooltip > .tooltip-inner {
+      background-color: whitesmoke;
+      color: #333333;
+      max-width: 100%; }
+    #controlPanelAlt .pageElements input.showInput + .tooltip > .tooltip-arrow {
+      border-bottom-color: whitesmoke; }
+    #controlPanelAlt .pageElements button {
+      color: #666666;
+      border-radius: .3em; }
+    #controlPanelAlt .pageElements button.active {
+      color: #ffffff;
+      background-color: #090; }
+    #controlPanelAlt .pageElements textarea.headerItems {
+      height: 11em; }
+    #controlPanelAlt .pageElements textarea.pageContent {
+      width: 60%;
+      height: 7em;
+      margin-bottom: 1em; }
+    #controlPanelAlt .pageElements label {
+      margin-right: 1em;
+      width: 10%; }
+    #controlPanelAlt .pageElements label.radioLabel {
+      width: auto !important;
+      margin-left: 1em;
+      margin-right: 2em; }
+    #controlPanelAlt .pageElements label.disabledInput {
+      min-width: 30%;
+      max-width: 30%;
+      border: none;
+      background-color: #cccccc;
+      padding: 3px 7px;
+      color: #333333;
+      white-space: nowrap; }
+    #controlPanelAlt .pageElements label.disabledInput + .tooltip > .tooltip-inner {
+      background-color: #ff0000;
+      color: whitesmoke;
+      max-width: 100%; }
+    #controlPanelAlt .pageElements label.disabledInput + .tooltip > .tooltip-arrow {
+      border-bottom-color: #ff0000; }
+    #controlPanelAlt .pageElements .floatL {
+      float: left; }
+    #controlPanelAlt .pageElements .lego {
+      display: inline-block; }
+    #controlPanelAlt .pageElements input.full {
+      width: 100%; }
+    #controlPanelAlt .pageElements textarea.dynamicwidth {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+  #controlPanelAlt hr {
+    display: block;
+    clear: both;
+    height: 1px;
+    border: 0;
+    background-color: #999999;
+    position: relative;
+    top: 2em; }
+
 #controlPanel {
   position: fixed;
   top: 0px !important;
